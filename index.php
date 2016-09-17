@@ -24,8 +24,8 @@ $cfs =new cfs();
         <meta name="format-detection" content="telephone=yes"/>		
         <meta name="Description" content="Coworkingspace Salzburg. Entdecke die Welt des Coworkings und nutze den kostenlosen Probetag!"/>        
         <meta charset="utf-8" />        
-        <title>Coworkingspace Salzburg &Ouml;sterreich</title>        
-        <meta name="description" content="">        
+        <title><?php echo get_bloginfo('name');?></title>        
+        <meta name="description" content="<?php echo get_bloginfo('description');?>">        
         <meta name="author" content="">        
         <!--[if lt IE 9]>
                     <link rel="stylesheet" type="text/css" href="css/ie.css" />
@@ -34,19 +34,10 @@ $cfs =new cfs();
                 <![endif]-->		
 
 
-
-
-
         <script type="text/javascript">
-        
-        	
-        
-        
             function toggle(obj) {
-			
                 var el = document.getElementById(obj);
                 el.style.display = (el.style.display == '' ? 'block' : ''  );
-		
             }
             
 	var boxclicked = {};
@@ -56,8 +47,6 @@ $cfs =new cfs();
 	boxclicked[11] = false;
 	boxclicked[12] = false;
 	boxclicked[13] = false;
-
-
 
             function boxeschalkmouseclick(boxnumber) {
 		boxclicked[boxnumber] = !boxclicked[boxnumber];
@@ -307,19 +296,26 @@ src="https://www.facebook.com/tr?id=140363743073498&ev=PageView&noscript=1"
                 <ul class="slides" >                    
                     <?php
                     $query = new WP_Query(array(
-                                'post_type' => 'cws_sliderimages',
+                                'post_type' => 'post',
                                 'orderby' => 'title',
-                                'order' => 'asc'
+                                'order' => 'asc',
+				'posts_per_page' => 9999,
+				'category_name' => 'sliderimages',
+
                             ));
                     if ($query->have_posts()) :
                         while ($query->have_posts()) :
-                            $query->the_post();
-                            $img_src = get_custom_field("cws_headerimage:to_image_src");
+                            	$query->the_post();
+				$gallery = get_post_gallery( get_the_ID(), false );
+				if (isset($gallery["src"]))
+					foreach($gallery["src"] as $img_src) {
+//                            $img_src = get_custom_field("cws_headerimage:to_image_src");
                             ?>                            
                             <li>                                
-                                <img                                  	 src="<?php echo get_template_directory_uri(); ?>/images/dummy.png"                                 	 alt=""                                 	 class="flexsliderimage"                                 	 style="background-image: url(<?php echo $img_src; ?>);"                                 	 />                             
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/dummy.png"                                 	 alt=""                                 	 class="flexsliderimage"                                 	 style="background-image: url('<?php echo $img_src; ?>');"                                 	 />                             
                             </li>                            
                             <?php
+					}
                         endwhile;
                     endif;
                     ?>                
@@ -430,13 +426,13 @@ buy now
 
                 
                 <div id="pricedescr1" style="display:none" class="prices pricedescr pricedescr1">
-                    <?php echo $cfs->get("pricedescr_dayticket", 2); ?>
+			<?php echo get_option('price_ticket_day_description'); ?> 
                 </div>                    
                 <div id="pricedescr3" style="display:none" class="prices pricedescr pricedescr2">
-                    <?php echo $cfs->get("pricedescr_10tickets", 2); ?>
+			<?php echo get_option('price_ticket_10_description'); ?>
                 </div>                  	
                 <div id="pricedescr2" style="display:none" class="prices pricedescr pricedescr3">
-                    <?php echo $cfs->get("pricedescr_monthly", 2); ?>
+			<?php echo get_option('price_ticket_month_description'); ?>
                 </div>
                                   	                   	
                 <div id="priceheader1" class="eraser prices priceheaders priceheader1">DAY TICKET
@@ -571,13 +567,13 @@ buy now
                 </div>
                 
                 <div id="pricedescr11" style="display:none" class="prices pricedescr pricedescr1">
-                    <?php echo $cfs->get("pricedescr_friendticket", 2); ?>
+                    <?php echo get_option('price_club_description'); ?>
                 </div>                    
                 <div id="pricedescr13" style="display:none" class="prices pricedescr pricedescr2">
-                    <?php echo $cfs->get("pricedescr_eventroom", 2); ?>
+                    <?php echo get_option('price_eventroom_description'); ?>
                 </div>                  	
                 <div id="pricedescr12" style="display:none" class="prices pricedescr pricedescr3">
-                    <?php echo $cfs->get("pricedescr_meetingroomticket", 2); ?>
+                    <?php echo get_option('price_meetingroom_description'); ?>
                 </div>
                                   	                   	
                 <div id="priceheader11" class="eraser prices priceheaders priceheader1">CLUB
@@ -670,11 +666,12 @@ buy now
             <div class="inner-divider">             			    
                 <?php
                 $query = new WP_Query(array(
-                            'post_type' => 'cws_coworkers',
+                            'post_type' => 'post',
                             'post_status' => 'publish',
                             'orderby' => 'title',
                             'order' => 'asc',
                             'posts_per_page' => 9999,
+//			    'category_name' => 'coworkers'
                         ));
 
                 if ($query->have_posts()) :
@@ -929,7 +926,7 @@ buy now
                         <img src="<?php echo get_template_directory_uri(); ?>/images/ico_xing.png" alt="Coworking Salzburg auf Xing"/></a>
                 </li>                
             </ul>                                 
-            <div class="yellow footerelement borderright" id="footercoworkingspace">&copy; <span class="bold">COWORKING</span>SALZBURG 2013             
+            <div class="yellow footerelement borderright" id="footercoworkingspace">&copy; <?php echo str_replace("##YEAR##", date('Y'), get_option("copyright")); ?>             
             </div>            
             <div class="yellow yellowlink footerelement borderright" id="press">            	
                 <a href="http://firmen.wko.at/Web/DetailsKontakt.aspx?FirmaID=50a6f8f3-1542-4b48-a7f7-a2b765328c97&amp;StandortID=0">Press</a>            
