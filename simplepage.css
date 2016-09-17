@@ -1,0 +1,31 @@
+body {
+	background: url("images/blackboard-coworkingspace.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0px;
+}
+
+.simplecontent {
+	max-width: 1200px;
+	background-color: blue;
+	margin: auto;
+}
+
+.simpletitle {
+	font-size: 20px;
+	color: white;
+	text-align: center;
+}
+
+.simplepost {
+}
+
+.logolink {
+
+}
+
+.logo {
+	height: 50px;
+	margin-top: 30px;
+}
+

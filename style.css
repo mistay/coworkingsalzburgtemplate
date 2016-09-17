@@ -1,0 +1,1522 @@
+body {
+	
+	margin:0;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+
+.divider strong {
+	text-transform: uppercase;
+}
+
+.yellow {
+	color: #FFEF00;
+}
+.yellow a {
+	color: #FFEF00;
+
+}
+.yellowlink a {
+	color: #FFEF00;
+	text-decoration: none;
+}
+
+.yellowbg {
+	background-color: #FFEF00;
+}
+.white {
+	color: #ffffff;
+}
+.blackcolor{
+	color: #000000;
+}
+.blacklink a {
+	color: #000000;
+	text-decoration: none;
+}
+.blackbg{
+	background-color: #000000;
+}
+.whitebg{
+	background-color: #ffffff;
+}
+.noborder {
+	border: 0px;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.centertext{
+	text-align: center;
+}
+
+.eraser {font: 27px 'EraserRegular', Arial, sans-serif;}
+@font-face {
+    font-family: 'EraserRegular';
+    src: url('fonts/eraser/EraserRegular-webfont.eot');
+    src: url('fonts/eraser/EraserRegular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/eraser/EraserRegular-webfont.woff') format('woff'),
+        url('fonts/eraser/EraserRegular-webfont.ttf') format('truetype'),
+        url('fonts/eraser/EraserRegular-webfont.svg#EraserRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.clear {
+	clear:both;
+  display: block;
+  overflow: hidden;
+  height: 1px;
+  width: 100%;
+}
+
+/* ---------------- mobilenavigation ------------------------------------------------*/
+
+.mobilenavigation {
+	text-align: center;
+	background-color: #000000;
+	padding:1px;
+	display: none;
+	
+}
+.mobilenavigation ul li{
+	padding: 5px;
+}
+/* ---------------- /mobilenavigation ----------------------------------------------*/
+
+
+/* ---------------- nav ------------------------------------------------------------*/
+
+
+
+#logo {
+	background: url("images/coworkingspacesalzburglogo.png") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+  	height: 50px;
+	width: 294px;
+	margin-top: 30px;
+	position: absolute;
+	
+	border: 50px solid #FFEF00;
+	border-right: 0px;
+	border-bottom: 0px;
+	border-top: 0px;
+	z-index: 999;
+	
+	
+}
+
+
+#mobile-navigation-inner {
+	display:table;
+	width:100%;
+	
+}
+#mobile-navigation-inner ul {
+	display:table-row;
+    width:100%;
+}
+#mobile-navigation-inner li {
+    display:table-cell;
+    text-align:center;
+}
+#mobile-navigation-inner a {
+    display:block;
+}
+
+
+#iconav {
+	padding-top: 20px;
+	float: right;
+	display:none;
+	
+}
+
+@media all and (min-width: 970px)  {
+	.navigation {
+		padding-right: 130px;
+	}
+}
+@media all and (max-width: 970px)  {
+	.navigation {
+		padding-right: 10px;
+	}
+}
+
+@media all and (max-width: 870px)  {
+	.navigation ul li a {
+		font-size: 15px;
+		
+	}
+	
+}
+@media all and (min-width: 870px)  {
+	.navigation ul li a {
+		font-size: 20px;
+		
+	}
+	
+}
+@media all and (max-width: 765px)  {
+	#nav										
+	{ 
+		display:none;
+	}
+	#iconav {
+		display:inline;
+	}
+}
+@media all and (max-width: 390px)  {
+	#logo {
+		border: 0px;
+		
+	}
+}
+@media all and (max-width: 390px)  {
+	#iconav {
+		position: absolute;
+		left:280px;
+	}
+	#logo {
+		border: 10px solid #FFEF00;
+		border-left: 0px;
+		border-right: 0px;
+		margin-top: 20px;
+		width: 234px;
+		height: 40px;
+		padding-left: 20px;
+	}
+}
+
+.navigation-ar {
+/*	text-align:right;   */
+	height: 60px;
+	background-color: black;
+	display: block;
+	
+}
+.navigation-ar ul {
+    float: right;
+    margin-bottom: 0;
+    margin-top: 0;
+/*padding-top: 20px;  */
+line-height: 58px;
+    text-align: right;
+
+}
+.navigation-ar ul li {
+	display:inline;
+	/*float: right;*/
+	padding-right: 30px;
+}
+.navigation-ar ul li a {
+	text-decoration: none;
+}
+.navigation-ar ul li a:hover {
+	text-decoration: underline;
+}
+
+@media all and (max-width: 985px)  {
+	.navigation-ar ul {
+		display: none; /* desktopmenu unter 985pixel browserbreite ausblenden */
+	}
+}
+
+
+
+#getupdatesonfacebook { 
+	display: inline;
+	padding-right: 60px;	
+	
+	
+}
+
+
+.getupdatesonfacebookimg {
+	
+	padding-top:17px;
+	opacity:1;
+	position:absolute;
+	width: 23px;
+}
+
+.newsletterheadline {
+	position:absolute;
+	padding-top: 20px;
+	font-size: 12px;
+	top: 0;
+	padding-left: 120px;
+	height: 0px;
+	
+	
+	
+}
+
+.opacity60 {
+	opacity:0.60;
+}
+.opacity30 {
+	opacity:0.30;
+}
+
+@media all and (max-width: 1400px)  {
+	#getupdatesonfacebook {
+		display:none;		
+	}
+}
+
+/* ---------------- /nav ------------------------------------------------------------*/
+
+
+
+
+
+
+/* ---------------- flexslider ------------------------------------------------------*/
+#flexslider.noborder {
+	border:0px;
+}
+#flexslider.nomargin {
+	margin:0;
+}
+
+.flexsliderimage{ 
+	height: 144px;
+	border:0px;
+	background-size: cover;
+	
+	background-position: center center; 
+	background-repeat: no-repeat
+} 
+
+/* @media screen and (min-width: 0px) */
+@media screen and (min-width: 0em) { .flexsliderimage{ height: 180px} }
+
+/* @media screen and (min-width: 480px) */
+@media screen and (min-width: 30em) { .flexsliderimage{ height: 238px} }
+
+/* @media screen and (min-width: 640px) */
+@media screen and (min-width: 40em) { .flexsliderimage{ height: 296px} }
+
+/* @media screen and (min-width: 720px) */
+@media screen and (min-width: 45em) { .flexsliderimage{ height: 354px}}
+
+/* @media screen and (min-width: 888px) */
+@media screen and (min-width: 55.5em) { .flexsliderimage{ height: 412px}}
+
+/* @media screen and (min-width: 984px) */
+@media screen and (min-width: 61.5em) { .flexsliderimage{ height: 470px}}
+
+/* @media screen and (min-width: 1200px) */
+@media screen and (min-width: 75em) { .flexsliderimage{ height: 530px}}
+
+/* ---------------- /flexslider -----------------------------------------------------*/
+
+
+/* ---------------- cws offers ------------------------------------------------------*/
+
+
+#cwsoffers {
+	
+}
+
+.circle {
+	border-radius: 50%;
+	font-size: 15px;
+}
+
+.wait-link {
+	width: 90px;
+	height: 90px;
+	float: right;
+	display: block;
+	text-align: center;
+	overflow: hidden;
+}
+
+a.wait-link { text-decoration: none;}
+
+.divider {
+/*	text-align: center; */
+}
+
+#coworkingspaceoffers .inner-divider {
+
+}
+
+
+@media screen and (min-width: 0px) { 
+	.waitwhat, wait-link {  width: 90px; height:90px;} 
+}
+@media screen and (min-width: 470px) and (max-width: 600px)	{ 
+	.waitwhat {
+		
+	}
+	#coworkingspaceoffers .divider {
+		min-height: 84px;
+	}
+}
+
+@media screen and (min-width: 640px)	{ }
+@media screen and (min-width: 720px) 	{
+ 	.waitwhat, wait-link {  width: 70px; height:70px; }
+}
+ 
+@media screen and (min-width: 888px) 	{ .waitwhat{  }}
+@media screen and (min-width: 984px) 	{
+	.waitwhat, wait-link {  width: 70px; height:70px; }
+}
+ 
+
+@media screen and (min-width: 1185px) 	{
+
+	#coworkingspaceoffers .divider {
+		min-height: 54px;
+		padding-top: 23px;
+	} 
+
+	.wait-link, .divider.light a.wait-link {
+		margin-top: -14px;
+		background-color: transparent;
+	}
+}
+
+@media screen and (min-width: 1392px) 	{ .waitwhat{  }}
+@media screen and (min-width: 1680px) 	{ .waitwhat{  }}
+@media screen and (min-width: 1872px) 	{ .waitwhat{  }}
+
+
+
+
+#cwsoffers {
+  box-shadow: 0 0 3px 1px #000000;
+    font-size: 2em;
+    margin-top: -6px;
+    padding-bottom: 10px;
+    padding-top: 13px;
+    position: relative;
+    text-align: center;
+   /* padding-right: 80px;   */
+   width: 100%;
+  }
+  
+.divider-in {
+	display: block;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1180px;
+	position: relative;
+}  
+#cwsoffers .bold {
+
+}  
+.yellowbg #cwsoffers  {
+    background-color: #FFEF00;
+    color: #000000;
+  }
+.yellowbg #cwsoffers span {
+
+} 
+
+.yellowbg #cwsoffers .test {
+ position: absolute;
+ right: 0px;
+ top: 50%;
+ bottom: 50%;
+} 
+  
+.yellowbg #cwsoffers:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.yellowbg #cwsoffers a {
+	display: inline-block;
+}
+
+  
+
+@media all and (max-width:600px){
+	#cwsoffers {
+		font-size:1.4em;
+	}
+}
+
+
+/* ---------------- /cws offers -----------------------------------------------------*/
+
+
+
+
+/* ---------------- pricing ---------------------------------------------------------*/
+
+.closeboxinfo {
+	cursor: pointer;
+	z-index: 500;
+	margin-top: 25px;
+	position: absolute;
+	left: 50%;
+	display: none;
+
+	background-image: url("images/x_weisz.png");
+	background-size: cover;
+	height: 25px;
+	width: 25px;
+
+}
+.closeboxinfo:hover {
+	background-image: url("images/x_tuerkies.png");
+}
+#closeboxinfo1,#closeboxinfo11 {
+	margin-left: -170px;
+}
+#closeboxinfo2,#closeboxinfo12 {
+	margin-top: 10px;
+	margin-left: 100px;
+}
+#closeboxinfo3,#closeboxinfo13 {
+	margin-left: 310px;
+}
+
+.boxinfo {
+	text-align: center;
+	cursor: pointer;
+	z-index: 500;
+	font-size: 30px;
+	margin-top: 30px;
+	display: inline;
+	position: absolute;
+	border-radius: 30px;
+	background-color: white;
+	width: 30px;
+	height: 30px;
+	left: 50%;
+}
+.boxinfo:hover {
+	background-color: #13f1c5;
+}
+#boxinfo1,#boxinfo11 {
+	margin-left: -190px;
+}
+#boxinfo2,#boxinfo12 {
+	margin-top: 20px;
+	margin-left: 70px;
+}
+#boxinfo3,#boxinfo13 {
+	margin-left: 305px;
+}
+
+
+
+
+
+
+
+.buynow  {
+	cursor: pointer;
+	z-index: 500;
+	background-color: #ffef00;
+	font-size: 13px;
+	display: inline;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-top: 2px;
+	padding-bottom: 0px;
+	position: absolute;
+	margin-top: 60px;
+	text-transform: uppercase;
+	border-radius: 5px;
+	color: black;
+	text-decoration: none;
+}
+.buynow:hover {
+	background-color: #13f1c5; /*cwstuerkies*/
+}
+
+.boxes_chalk_line {
+	position: absolute;
+	margin-top: 50px;
+	left: 50%;
+}
+#boxes_chalk_line1, #boxes_chalk_line11 {
+	margin-left: -350px;
+}
+#boxes_chalk_line2, #boxes_chalk_line12 {
+	margin-left: -130px;
+	margin-top: 50px;
+}
+#boxes_chalk_line3, #boxes_chalk_line13 {
+	margin-left: 110px;
+}
+
+
+#boxes_chalk {
+	position: relative;
+}
+
+.pricing {
+	background: url("images/blackboard-coworkingspace.jpg") no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 800px;
+}
+
+.prices {
+	color:white; font-size: 60px; position:absolute; left: 50%; margin-top: 75px; 
+}
+.priceheaders {
+	font-size: 16px;
+}
+.iconinfo {
+	width: 29px;
+	position: absolute;
+	margin-top: -5px;
+	margin-left: 5px;
+	cursor:pointer;
+}
+.iconinfosmall {
+	width: 20px;
+	position: absolute;
+	margin-top: -2px;
+	margin-left: 5px;
+}
+
+.priceheader1 {
+	margin-top: 35px;
+	margin-left: -510px;
+	width: 500px;
+}
+.priceheader3 {
+	margin-top: 25px;
+	margin-left: -260px;
+	width: 500px;
+}
+.priceheader2 {
+	margin-top: 35px;
+	margin-left: -20px;
+	width: 500px;
+}
+
+
+.wanttobepartofourcommunity {
+	padding-top: 30px;
+	
+	font-size: 15px;
+}
+
+
+@media screen and (min-width: 0px) 		{ 
+	
+	
+	.pricing-mobile {
+		display:block;
+	}
+	.pricing-desktop {
+		display:none;
+	}
+	.pricelistitem {
+		font-size: 18px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.welikeitsimple{
+		font-size: 21px;
+	}
+	.welikeitsimple{
+		font-size: 28px;
+		padding-top: 20px;
+	}
+	.firstdayonus {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-size: 16px;
+	}
+	.chalkline {
+		display:block; 
+		margin-left: auto; 
+		margin-right:auto;
+		padding-bottom: 10px;
+		padding-top: 40px;
+	}
+	.pricedesc {
+		position: absolute;
+		left: 50%;
+		margin-left: -170px;
+	}
+	.pricetotal {
+		position: absolute;
+		left: 50%;
+		margin-left: 80px;
+		font-size: 23px;
+	}
+	
+	
+}
+@media screen and (max-width: 750px) 	{
+	.wanttobepartofourcommunity {
+		display:none;
+	}
+	#mitgliedschaft {
+		display: none;
+	}
+	.buynow {
+		margin-left: 30px;
+	}
+	#buynow1,#buynow11 {
+		margin-top: 165px;
+		left: 50%;
+	}
+	#buynow2,#buynow12 {
+		margin-top: 58px;
+		left: 50%;
+	}
+	#buynow3,#buynow13 {
+		margin-top: 111px;
+		left: 50%;
+	}
+
+}
+
+@media screen and (min-width: 750px) 	{
+#buynow1, #buynow11 {
+	left: 50%;
+	margin-left: -280px;
+	margin-top: 60px;
+}
+#buynow2, #buynow12 {
+	left: 50%;
+	margin-left: -38px;
+	margin-top: 52px;
+}
+#buynow3, #buynow13 {
+	left: 50%;
+	margin-left: 200px;
+	margin-top: 60px;
+}
+
+	.pricing-mobile {
+		display:none;
+	}
+	.pricing-desktop {
+		display:block;
+	}
+	
+	.pricing {
+		height: 800px;
+	}
+	
+	.firstdayonus {
+		padding-top: 15px;
+		padding-bottom: 30px;
+		font-size: 20px;
+	}
+	
+	.price1 {
+		margin-left: -300px;
+	}
+	.price2 {
+		margin-left: 170px;
+	}
+	.price3 {
+		margin-left: -90px;
+	}
+	
+	.welikeitsimple{
+		font-size: 50px;
+		padding-top: 60px;
+	}
+	
+	
+	.pricedescr  {
+		font-size: 10px;
+		text-align: left;
+		
+		
+	}
+	.pricedescr1 {
+		font-size: 11px;
+		margin-left: -335px;
+		margin-top: 30px;
+		width: 195px;
+	}
+	
+	.pricedescr2 {
+		font-size: 11px;
+		margin-left: 145px;
+		margin-top: 30px;
+		width: 195px;
+	}
+	
+	.pricedescr3 {
+		font-size: 11px;
+		margin-left: -120px;
+		margin-top: 20px;
+		width: 240px;
+	}
+	
+	
+	
+	
+	
+}
+/* ---------------- /pricing --------------------------------------------------------*/
+
+/* ---------------- the do what you want revolution ---------------------------------*/
+
+
+@media screen and (min-width: 710px)			{ .thedowhatyouwantrevolution { height: 88px; }}
+
+
+/*
+#thedowhatyouwantrevolution {
+	padding-top: 20px;
+}
+
+@media screen and (min-width: 0px)			{ #thedowhatyouwantrevolution { font-size: 20px; height: 60px; }}
+@media screen and (min-width: 480px)		{ #thedowhatyouwantrevolution { font-size: 20px; height: 40px; }}
+@media screen and (min-width: 710px)		{ #thedowhatyouwantrevolution { font-size: 30px; height: 49px; }}
+*/
+
+/* ---------------- /the do what you want revolution --------------------------------*/
+
+
+/* ---------------- take a virtual tour ---------------------------------------------*/
+.takeavirtualtourcircle {
+	
+	display:block; 
+	
+	text-align: center;
+	position:absolute;
+	left: 50%;
+	
+	
+	
+	
+}
+.takeavirtualtourcircle, .takeavirtualtourcircle a{
+	text-decoration: none;
+}
+
+.virtualtourdiv {
+	background: #000000 url(images/coworkingspacesalzburg_fisheye.jpg) center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+@media screen and (min-width: 0px)			{ .takeavirtualtourcircle { font-size: 20px; width: 120px; height: 120px; margin-top: 10px;  margin-left: -60px;} .virtualtourdiv{ height: 151px;}}
+@media screen and (min-width: 500px)		{ .takeavirtualtourcircle { font-size: 30px; width: 180px; height: 180px; margin-top: 120px; margin-left: -77px;} .virtualtourdiv{ height: 443px;}}
+
+
+/* ---------------- /take a virtual tour --------------------------------------------*/
+
+
+/* ---------------- easy access -----------------------------------------------------*/
+
+/*
+#easyaccess {
+	padding-top: 25px;
+	height: 45px;
+	font-size: 20px;
+}
+*/
+/* ---------------- /easy access ----------------------------------------------------*/
+
+/* ---------------- coworkers -------------------------------------------------------*/
+.coworkers {
+	background: #000000 url(images/wood.jpg) center top repeat-y;
+	background-size: 100%;
+	margin-left: auto; margin-right: auto;
+}
+
+.meetourcoworkers {
+	padding-top: 20px;
+	text-align: center;
+    text-shadow:1px 1px 0px rgba(0,0,0, 0.53);
+}
+
+.coworker-box {
+	display: inline-block;
+  	width: 220px;
+  	height: 280px;
+	border-bottom: 1px solid #aaa7a6; 
+	margin: 8px;
+	overflow: hidden;
+	position: relative;
+	background-color: white;
+}
+
+.coworker-box
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.3) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.3) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.7), 0 0 40px rgba(0, 0, 0, 0.3) inset;
+}
+
+.coworker-box:before, .coworker-box:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+
+.coworker-box:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+
+a.coworker-link  {
+	text-decoration: none;
+} 
+
+.coworkeritem {
+  background-color: white;
+    display: block;
+    height: 100%;
+    padding: 10px;
+	} 
+  
+  	.coworkerlogo {
+		display:block;
+	/*	right: 0%;
+		padding-right: 70px;
+		padding-top: -20px;
+		border: 1px solid;
+		height: 30px;  */
+    bottom: 10px;
+		
+	}
+.coworkerlogo img {
+
+bottom: 0px;
+
+}
+@media screen and (min-width: 500px) {
+	.meetourcoworkers {
+		font-size: 60px;
+    line-height: 60px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+	}
+	.coworkeritem {
+	/*	width: 222px; height: 250px; 
+		display:inline-block; background-color: white; margin: 20px;
+    */
+	}  
+	.coworkerimg {
+	/*	margin-left: 5px;
+		margin-top:15px;   */
+		
+	}
+  
+  .coworkerlogo img {
+  width: 100%;
+  height: auto;
+  }
+  
+	.coworkername {
+		color: black;
+		font-size: 16px;
+    display: block;
+	}
+	.coworkercompanyname {
+		/*color: #d4d4d4;  */
+    color: #a5a5a5;
+		height: 40px;
+        display: block;
+        font-style: italic;
+	}
+}
+
+
+
+@media screen and (min-width: 0px) and (max-width: 500px) {
+	.coworkers {
+		display: none;
+	}
+}
+/* ---------------- /coworkers ------------------------------------------------------*/
+
+/* ---------------- events ----------------------------------------------------------*/
+
+
+.eventdate {
+	text-align: center;
+/*	padding-left: 10px; */
+	font-size: 40px;
+	margin-top: 24px;
+  margin-bottom: 24px;
+/*	margin-right: 30px;*/
+  width: 173px;
+  display: block;
+}
+
+.eventdateinfo {
+display: block;
+}
+.eventtime {
+	text-align: center;
+	margin-top:-10px;
+	
+}
+.eventdescription {
+	padding-left: 30px;
+	margin-top: 20px;
+
+}
+.events {
+	
+}
+.eventitem {
+/*	height: 130px; */
+	
+}
+
+
+.seeourevents {
+	padding-top: 40px;
+	font-size: 60px;
+	
+	height: 500px;
+	background-color: white;
+	
+	/*background: url("images/blackboard-coworkingspace-stage.jpg") no-repeat center center; */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.seeourevents .left {
+	display: block;
+	width: 20.6%;
+	float: left;
+}
+.left {
+	background: none repeat scroll 0 0 black;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+.seeourevents .left .inner-divider {
+   font-size: 0.28em;
+   line-height:  1.2em;
+    text-align: left;
+}
+
+.seeourevents .left .divider {
+margin-right: 5px;
+}
+
+.seeourevents .left .inner-divider .contactus {
+  font-size: 0.6em;
+    margin-top: 20px;
+    line-height: 1.3em;
+    height: 30px;
+    text-decoration: none;
+    border-bottom: 1px solid #FFEF00;
+    
+}
+
+
+
+.events.right {
+display: block;
+width: 69.4%;
+float: left;
+}
+
+.seeourevents-head {
+
+	color: black;
+    font-size: 60px;
+    line-height: 60px;
+    padding-bottom: 70px;
+    padding-top: 10px;
+
+}
+
+.eventdescription {
+   text-align: left; font-size: 30px; float: left ;
+   width: 70%;
+}
+
+
+@media screen and (max-width: 560px) {
+	#events {
+		display:none;
+	}
+	
+}
+
+@media screen and (max-width: 1200px) {
+	.eventdescription {
+		width: 70%;
+	}	
+}
+
+@media screen and (max-width: 1000px) {
+	.eventdescription {
+		width: 60%;
+	}	
+}
+
+@media screen and (max-width: 800px) {
+	.eventdescription {
+		width: 50%;
+	}	
+}
+
+@media screen and (max-width: 660px) {
+	.eventdescription {
+		width: 40%;
+	}	
+}
+
+
+	
+/* ---------------- /events ---------------------------------------------------------*/
+
+
+/* ---------------- aboutus ---------------------------------------------------------*/
+.aboutus {
+	padding-top: 40px;
+	font-size: 60px;
+	
+	height: 800px;
+	
+	
+	background: url("images/blackboard-coworkingspace-stage.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+@media screen and (min-width: 0px) and (max-width: 770px) {
+	.aboutus {
+		display: none;
+	}
+}
+
+
+/* ---------------- /aboutus ---------------------------------------------------------*/
+
+
+/* ---------------- googlemaps ------------------------------------------------------*/
+.googlemaps {
+	
+	height:500px;
+}
+.yellowbox {
+	z-index: 100; 
+	position:absolute; 
+	background-color:#FBF350; 
+	margin-top: 50px;
+	margin-left:20px;
+	padding:20px;
+	opacity:0.81;
+	max-width: 450px;
+}
+
+@media screen and (min-width: 1100px) {
+	.yellowbox {
+		
+	
+		left:50%;
+		padding-left: 20px;
+		padding-right: 20px;
+		 
+	}
+}
+/* ---------------- /googlemaps -----------------------------------------------------*/
+
+
+/* ---------------- footer ----------------------------------------------------------*/
+.html5css3 {
+	height: 20px;
+	padding-left: 5px;
+}
+
+.footer {
+	background-color: black;
+	height: 72px;
+	text-align:right;
+	
+}
+.footerdiv {
+	display:inline-block;
+}
+.socialmedialist {
+	position:absolute;
+	
+}
+.socialmedialist li {
+	display:inline;
+}
+.footerelement {
+	
+	display:inline-block;
+	
+	border-color: #FFEF00;
+	margin-top: 18px;
+	padding-top: 10px;
+	
+	
+	padding-right: 20px;
+	padding-left: 20px;
+	height: 30px;
+	
+}
+#lastfooterelement {
+	padding-right: 300px;
+}
+
+.borderright {
+	border-right: 1px solid rgba(255, 239, 0, .3);
+	
+	
+}
+
+@media screen and (max-width: 1100px) {
+	.socialmedialist {
+		position:relative; display:block;
+	}
+	.footer {
+		text-align:left;
+		height: auto;
+	}
+	#footercoworkingspace {
+		display:block;
+	
+	}
+	.borderright {
+		border: 0px;
+	}
+	#press {
+		border-right: 1px solid rgba(255, 239, 0, .3);
+	}
+	
+	#lastfooterelement {
+	padding-right: 0px;
+}
+
+}
+
+/* ---------------- /footer ---------------------------------------------------------*/
+
+
+/* ---------------- imprint ---------------------------------------------------------*/
+.imprint {
+	border-spacing:50px;
+}
+@media all and (max-width:600px) {
+	.imprint {
+		border-spacing:10px;
+		
+	}
+	.imprint tr td {
+		font-size: 9px;
+	}
+}
+
+.imprint tr td {
+	font-size: 12px;
+	text-align: left;
+	vertical-align:top;
+}
+
+.btn_imprint {
+	cursor: pointer;
+}
+
+/* ---------------- /imprint --------------------------------------------------------*/
+
+
+/* werner */
+*{
+	margin:0px;
+	padding:0px;
+	-webkit-appearance:none;
+}
+
+body{
+	background-color:#000000;
+}
+
+#navigation{
+	position:fixed;
+	margin-left:auto;
+	margin-right:auto;
+	height:58px;
+	width:100%;
+	background:#000000;
+	z-index:600;
+	-moz-box-shadow: 0 0 3px 1px #000000;
+	-webkit-box-shadow: 0 0 3px 1px #000000;
+	box-shadow: 0 0 3px 1px #000000;
+}
+
+@media all and (max-width:910px){
+	#navigation, #navigation-container{
+		position:absolute;
+		height:48px;
+	}
+}
+
+#navigation-container{
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	max-width:1400px;
+	height:58px;
+	background:none;
+	z-index:650;
+}
+
+
+img.logo{
+	position:relative;
+	height:52px;
+	top:33px;
+	z-index:300;
+}
+
+@media all and (max-width:600px){
+	img.logo{
+		height:30px;
+		top:30px;
+	}
+}
+
+#logo-bg{
+	position:absolute;
+	background-color:#ffef00;
+	width:80%;
+	height:52px;
+	top:33px;
+	left:-80%;
+}
+
+#content{
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	background:none;
+	z-index:250;
+	top:58px;
+	color:#ffffff;
+	text-align:center;
+}
+
+@media all and (max-width:600px){
+	#content{
+		top:48px;
+	}
+}
+
+#royal{
+	width:100%;
+	padding:0px;
+	margin:0px;
+	border:0px;
+}
+
+#royal img{
+	width:100%;
+	border:0px;
+}
+
+.divider{
+	position:relative;
+	-moz-box-shadow: 0 0 3px 1px #000000;
+	-webkit-box-shadow: 0 0 3px 1px #000000;
+	box-shadow: 0 0 3px 1px #000000;
+	font-size:2em;
+	padding-top:13px;
+	padding-bottom:10px;
+/*	margin-top:-6px; */
+}
+
+@media all and (max-width:600px){
+	.divider{
+		font-size:1.4em;
+	}
+}
+
+.divider.light, .divider.light a {
+	color:#000000;
+/*	background-color:#ffef00; */
+}
+
+.yellowbox .divider.light,.sayhello .divider.light a {
+	color:#000000;
+	background-color:#ffef00;
+  background: transparent;
+  box-shadow: none;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding-top: 0px;
+}
+
+.yellowbox .inner-divider {
+margin-top: 0px;
+}
+
+.divider.dark, .divider.dark a {
+	background-color:#000000;
+	color:#ffef00;
+}
+
+.footer{
+	font-size:10pt;
+	text-align:right;
+	padding-top:23px;
+	min-height:35px;
+}
+
+.mitgliedschaft {
+	padding-top: 20px;
+}
+
+.inner-divider{
+	position:relative;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	max-width:1180px;
+	background:none;
+/*  text-align: center; */
+}
+
+.section{
+	position:relative;
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	min-height:300px;
+	padding-top:100px;
+}
+
+.chalkboard{
+	background-image:url('images/bg.jpg');
+	background-size:100% auto;
+	background-position:center;
+	width:100%;
+	max-width:1180px;
+}
+
+@media all and (max-width:650px){
+	.chalkboard{
+		background-size:auto 100%;
+	}
+}
+
+.map{
+	width:100%;
+	color:#000000;
+	height:300px;
+	z-index:100;
+}
+
+/*  MOBILE SETTINGS */
+
+#menu-trigger img {
+	position: relative;
+	width: 28px;
+	margin-top: 8px;
+}
+
+#menu-trigger {
+	position:relative;
+	display:none;
+	float:right;
+	cursor: pointer;
+	margin-right:15px;
+	top:-45px;
+}
+#menu-facebook {
+	position:relative;
+	display:none;
+	float:right;
+	cursor: pointer;
+	margin-right:15px;
+	top:-45px;
+}
+#menu-facebook img {
+	position: relative;
+	width: 19px;
+	margin-top: 8px;
+}
+
+#mobile-navigation{
+	position:relative;
+	background-color:#000000;
+	color:#f2f2f2;
+	display:none;
+	padding:10px;
+}
+
+@media all and (max-width:985px){
+	#menu-trigger{
+		display:block;
+	}
+	#menu-facebook{
+		display:block;
+	}
+	
+}
+@media all and (max-width:600px){
+	#menu-trigger{
+		margin-top: 15px;
+	}
+	#menu-facebook{
+		margin-top: 15px;
+	}
+	
+}
+
+/* END MOBILE SETTINGS */
+/* /werner */
