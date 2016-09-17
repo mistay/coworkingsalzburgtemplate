@@ -351,7 +351,7 @@ src="https://www.facebook.com/tr?id=140363743073498&ev=PageView&noscript=1"
 <input type="hidden" name="lc" value="AT">
 <input type="hidden" name="item_name" value="Coworkingspace Salzburg Dayticket">
 <input type="hidden" name="item_number" value="Dayticket">
-<input type="hidden" name="amount" value="25">
+<input type="hidden" name="amount" value="<?php echo get_option('price_ticket_day'); ?>">
 <input type="hidden" name="currency_code" value="EUR">
 <input type="hidden" name="button_subtype" value="services">
 <input type="hidden" name="no_note" value="0">
@@ -373,7 +373,7 @@ buy now
 <input type="hidden" name="lc" value="AT">
 <input type="hidden" name="item_name" value="Coworkingspace Salzburg 1-Month-Ticket">
 <input type="hidden" name="item_number" value="1-Month-Ticket">
-<input type="hidden" name="amount" value="309">
+<input type="hidden" name="amount" value="<?php echo get_option('price_ticket_month'); ?>">
 <input type="hidden" name="currency_code" value="EUR">
 <input type="hidden" name="button_subtype" value="services">
 <input type="hidden" name="no_note" value="0">
@@ -392,7 +392,7 @@ buy now
 <input type="hidden" name="lc" value="AT">
 <input type="hidden" name="item_name" value="Coworkingspace Salzburg 10 Tickets">
 <input type="hidden" name="item_number" value="10 Tickets">
-<input type="hidden" name="amount" value="215">
+<input type="hidden" name="amount" value="<?php echo get_option('price_ticket_10'); ?>">
 <input type="hidden" name="currency_code" value="EUR">
 <input type="hidden" name="button_subtype" value="services">
 <input type="hidden" name="no_note" value="0">
@@ -493,7 +493,7 @@ buy now
 <input type="hidden" name="lc" value="AT">
 <input type="hidden" name="item_name" value="Coworkingspace Salzburg Membership">
 <input type="hidden" name="item_number" value="Membership">
-<input type="hidden" name="amount" value="175">
+<input type="hidden" name="amount" value="<?php echo get_option('price_club'); ?>">
 <input type="hidden" name="currency_code" value="EUR">
 <input type="hidden" name="button_subtype" value="services">
 <input type="hidden" name="no_note" value="0">
@@ -512,7 +512,7 @@ buy now
 <input type="hidden" name="lc" value="AT">
 <input type="hidden" name="item_name" value="Coworkingspace Salzburg Event Room">
 <input type="hidden" name="item_number" value="Event Room">
-<input type="hidden" name="amount" value="400">
+<input type="hidden" name="amount" value="<?php echo get_option('price_eventroom'); ?>">
 <input type="hidden" name="currency_code" value="EUR">
 <input type="hidden" name="button_subtype" value="services">
 <input type="hidden" name="no_note" value="0">
@@ -530,7 +530,7 @@ buy now
 <input type="hidden" name="lc" value="AT">
 <input type="hidden" name="item_name" value="Coworkingspace Salzburg Meeting Room">
 <input type="hidden" name="item_number" value="Meeting Room">
-<input type="hidden" name="amount" value="55">
+<input type="hidden" name="amount" value="<?php echo get_option('price_meetingroom'); ?>">
 <input type="hidden" name="currency_code" value="EUR">
 <input type="hidden" name="button_subtype" value="services">
 <input type="hidden" name="no_note" value="0">
@@ -671,20 +671,33 @@ buy now
                             'orderby' => 'title',
                             'order' => 'asc',
                             'posts_per_page' => 9999,
-//			    'category_name' => 'coworkers'
+			    'category_name' => 'coworkers'
                         ));
 
                 if ($query->have_posts()) :
                     while ($query->have_posts()) :
                         $query->the_post();
-                        $website = get_custom_field("cws_coworker_ownwebsite:to_string");
+                        $website = get_post_meta(get_the_ID(), 'cws_coworker_ownwebsite', '')[0]; //get_custom_field("cws_coworker_ownwebsite:to_string");
                         $website = htmlspecialchars($website);
                         $ahrefwebseite = $website == "" ? "" : '<a href="'. $website . '" target="_blank" class="coworker-link">';
                         $ahrefwebseiteclosing = $website == "" ? "" : '</a>';
 						
-                        $img_src = get_custom_field("cws_coworker_image:to_image_src");
-                        $logo_src = get_custom_field("cws_coworker_logoimage:to_image_src");
-                        $companyname = get_custom_field("cws_coworker_companyname:to_string");
+                        $img_src = get_the_post_thumbnail_url(get_the_ID(), 'full');// get_the_post_thumbnail(); //get_custom_field("cws_coworker_image:to_image_src");
+                        $companyname = get_post_meta(get_the_ID(), 'cws_coworker_companyname', '')[0]; // get_custom_field("cws_coworker_companyname:to_string");
+
+			$logo_src = "";
+			$html = get_the_content();
+			if (trim($html) != "") {
+				$doc = new DOMDocument();
+				$imageTags = $doc->getElementsByTagName('img');
+				$doc->loadHTML($html);
+				foreach($imageTags as $tag) {
+					$logo_src = $tag->getAttribute('src');
+					break;
+
+				}
+			}
+
                         $name = get_the_title();
                         ?>                         
                         <div class="coworker-box">                                                     
