@@ -60,7 +60,12 @@ function themeslug_customize_register( $wp_customize ) {
 
 
         $wp_customize->add_setting('copyright',          array('type' => 'option'));
-        $wp_customize->add_control('10', array('type' => 'text', 'section' => 'about', 'settings' => 'copyright',  'description' => __( 'Copyright Footer')));
+        $wp_customize->add_control('10', array('type' => 'text', 'section' => 'about', 'settings' => 'copyright',    'description' => __( 'Copyright Footer')));
+        
+	$wp_customize->add_setting('imprintleft',          array('type' => 'option'));
+	$wp_customize->add_setting('imprintright',          array('type' => 'option'));
+        $wp_customize->add_control('11', array('type' => 'textarea', 'section' => 'about', 'settings' => 'imprintleft',   'description' => __( 'Imprint left')));
+        $wp_customize->add_control('12', array('type' => 'textarea', 'section' => 'about', 'settings' => 'imprintright',  'description' => __( 'Imprint right')));
 }
 add_action( 'customize_register', 'themeslug_customize_register' );
 ?>
