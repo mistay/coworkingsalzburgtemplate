@@ -1,14 +1,17 @@
 <?php
 /*
-  Template Name: cwssimplepage
+  Template Name: cws SimplePage
  */
 ?>
 
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/simplepage.css">
-<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/simplepage.css">
+
+
+<script type="text/javascript" src="http://fast.fonts.com/jsapi/3f5ac1f8-244e-44e3-b2de-ce3537e43a2d.js"></script>
 
 
 <head>
+<title><?php wp_title( '| Coworking Salzburg', true, 'right' ); ?></title>
 <!-- Google Analytics -->
 <script type="text/javascript">
 
@@ -39,14 +42,14 @@ src="https://www.facebook.com/tr?id=140363743073498&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
 </head>   
-
+<body>
 <a href="/" class="logolink" >
 	<img class="logo" alt="Logo des Coworkingspace Salzburg" src="<?php echo get_template_directory_uri(); ?>/images/logo_coworkingsalzburg.png">
 </a>
 
 <p></p>
 
-<div class="simpletitle">
+<div class="simpletitle eraser">
 <h1>
 <?php echo get_the_title(); ?>
 </h1>
