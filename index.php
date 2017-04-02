@@ -166,7 +166,7 @@ $cfs =new cfs();
             });
         </script>       
 
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtTWCBQfiVHjMWOvQbyao2LwqNjaVVYQo"></script>        
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeSLHN6pbrZScchh_oSnZILL9B9vmXPAo"></script>        
         <script type="text/javascript">
 	    $(function() {
                 var myLatlng = new google.maps.LatLng(47.82290839006712,13.040488511323929);
@@ -268,13 +268,39 @@ src="https://www.facebook.com/tr?id=140363743073498&ev=PageView&noscript=1"
                     <li class="">
                         <a class="yellow" href="#where">Where</a>
                     </li>		
-                    <li class="">
-                        <a class="yellow" href="#coworkandbaby">Cowork&Baby</a>
-                    </li>					
-                    <li class="">
-                        <a class="yellow" href="http://coworking-camp.com/" target="_blank" >Camp</a>
+                    <li class="yellow pointer mainmenu">
+			<span>Services <div class="onlinecheckup">NEU! Coworking App</div></span>
+			<ul class="submenu">
+                                        <li><a href="http://coworking-camp.com" target="_blank">Coworking Camp</a></li>
+                                        <li><a href="https://www.facebook.com/coworkandbaby/?fref=ts" target = "_blank" >Cowork &amp; Baby</a></li>
+					<li><form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="romysigl@coworkingsalzburg.com">
+<input type="hidden" name="lc" value="AT">
+<input type="hidden" name="item_name" value="Coworking Salzburg Book">
+<input type="hidden" name="item_number" value="Coworking Book">
+<input type="hidden" name="amount" value="<?php echo get_option('price_eventroom'); ?>">
+<input type="hidden" name="currency_code" value="EUR">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="tax_rate" value="20.000">
+<input type="hidden" name="shipping" value="0.00">
+<input type="hidden" name="notify_url" value="https://coworkingspacesalzburg.at/paypal/ipn">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_paynow_SM.gif:NonHostedGuest">
+<a onclick="this.parentElement.submit()">
+Coworking Book
+</a>
+</form></li>
+                                        <li><a href="http://coworkingsalzburg.com/meet-our-expert/" target="_blank">Meet our Expert</a></li>
+
+                                        <li><a href="https://www.facebook.com/pg/CoWorking.Salzburg/photos/?tab=album&album_id=1303892792982230" target="_blank">Food 4 Feedback</a></li>
+                                        <li><a href="https://www.facebook.com/pg/CoWorking.Salzburg/photos/?tab=album&album_id=1216633845041459" target="_blank">Showtime</a></li>
+                                        <li><a href="https://www.yellowdesks.com/" target="_blank">Coworking App</a></li>
+                                        
+                        </ul>
+
                     </li>					
                 </ul>				
+
                 <!-- </nav>	-->
                 <div id="trigger">
                     <div id="menu-trigger">
@@ -347,7 +373,7 @@ src="https://www.facebook.com/tr?id=140363743073498&ev=PageView&noscript=1"
 
 <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin-bottom: 0px; height:0px">
 <input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="romysigl@yahoo.de">
+<input type="hidden" name="business" value="romysigl@coworkingsalzburg.com">
 <input type="hidden" name="lc" value="AT">
 <input type="hidden" name="item_name" value="Coworkingspace Salzburg Dayticket">
 <input type="hidden" name="item_number" value="Dayticket">
@@ -369,7 +395,7 @@ buy now
 
 <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin-bottom: 0px; height:0px">
 <input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="romysigl@yahoo.de">
+<input type="hidden" name="business" value="romysigl@coworkingsalzburg.com">
 <input type="hidden" name="lc" value="AT">
 <input type="hidden" name="item_name" value="Coworkingspace Salzburg 1-Month-Ticket">
 <input type="hidden" name="item_number" value="1-Month-Ticket">
@@ -388,7 +414,7 @@ buy now
 
 <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin-bottom: 0px; height:0px">
 <input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="romysigl@yahoo.de">
+<input type="hidden" name="business" value="romysigl@coworkingsalzburg.com">
 <input type="hidden" name="lc" value="AT">
 <input type="hidden" name="item_name" value="Coworkingspace Salzburg 10 Tickets">
 <input type="hidden" name="item_number" value="10 Tickets">
@@ -489,7 +515,7 @@ buy now
 
 <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin-bottom: 0px; height:0px">
 <input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="romysigl@yahoo.de">
+<input type="hidden" name="business" value="romysigl@coworkingsalzburg.com">
 <input type="hidden" name="lc" value="AT">
 <input type="hidden" name="item_name" value="Coworkingspace Salzburg Membership">
 <input type="hidden" name="item_number" value="Membership">
@@ -508,10 +534,10 @@ buy now
 
 <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin-bottom: 0px; height:0px">
 <input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="romysigl@yahoo.de">
+<input type="hidden" name="business" value="romysigl@coworkingsalzburg.com">
 <input type="hidden" name="lc" value="AT">
-<input type="hidden" name="item_name" value="Coworkingspace Salzburg Event Room">
-<input type="hidden" name="item_number" value="Event Room">
+<input type="hidden" name="item_name" value="Coworking Salzburg Book">
+<input type="hidden" name="item_number" value="Coworking Book">
 <input type="hidden" name="amount" value="<?php echo get_option('price_eventroom'); ?>">
 <input type="hidden" name="currency_code" value="EUR">
 <input type="hidden" name="button_subtype" value="services">
@@ -526,7 +552,7 @@ buy now
 </form>
 <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin-bottom: 0px; height:0px">
 <input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="romysigl@yahoo.de">
+<input type="hidden" name="business" value="romysigl@coworkingsalzburg.com">
 <input type="hidden" name="lc" value="AT">
 <input type="hidden" name="item_name" value="Coworkingspace Salzburg Meeting Room">
 <input type="hidden" name="item_number" value="Meeting Room">
@@ -567,20 +593,20 @@ buy now
                 </div>
                 
                 <div id="pricedescr11" style="display:none" class="prices pricedescr pricedescr1">
-                    <?php echo get_option('price_club_description'); ?>
+                    <?php echo get_option('price_membership_description'); ?>
                 </div>                    
                 <div id="pricedescr13" style="display:none" class="prices pricedescr pricedescr2">
-                    <?php echo get_option('price_eventroom_description'); ?>
+                    <?php echo get_option('price_meetingroom_description'); ?>
                 </div>                  	
                 <div id="pricedescr12" style="display:none" class="prices pricedescr pricedescr3">
-                    <?php echo get_option('price_meetingroom_description'); ?>
+                    <?php echo get_option('price_eventroom_description'); ?>
                 </div>
                                   	                   	
-                <div id="priceheader11" class="eraser prices priceheaders priceheader1">CLUB
+                <div id="priceheader11" class="eraser prices priceheaders priceheader1">MEMBERSHIP
                 </div>                    
                 <div id="priceheader13" class="eraser prices priceheaders priceheader2">MEETING ROOM 
                 </div>                  	
-                <div id="priceheader12" class="eraser prices priceheaders priceheader3">EVENT ROOM 
+                <div id="priceheader12" class="eraser prices priceheaders priceheader3">COWORKING BOOK 
                 </div>                  	                   	          			
                 <img id="boxes_chalk" src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk.png" alt="boxes chalk" />
                 <img class="boxes_chalk_line" id="boxes_chalk_line11" src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk_line1.png" alt="boxes chalk lines" />
@@ -591,7 +617,7 @@ buy now
             <!-- mobile -->                 
             <div class="pricing-mobile">					
                 <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk" />                	
-                <div class="white eraser pricelistitem pricedesc">EVENT ROOM
+                <div class="white eraser pricelistitem pricedesc">COWORKING BOOK
                 </div>                    
                 <div class="white eraser pricelistitem pricetotal">
                     <?php echo get_option("price_eventroom"); ?>.-
@@ -869,8 +895,15 @@ buy now
             <div class="yellowbox">           	 	
                 <div class="divider light">					
                     <div class="inner-divider"><?php //  echo $cfs->get("contact_header", 2);             ?>
-                        Stop by, say <strong>Hello</strong> 
-                    </div></div>          	 	
+                        Stop by, say <strong>Hello</strong></div>
+                    <font size="3"><p>COWORKING SALZBURG</p>
+                    <p>Techno-Z (Techno 2)</p>
+                    <p>Jakob-Haringer-Straße, 3</p>
+                    <p>5020, Salzburg</p>
+                    <p>Bus 6 (Jakob-Haringer)</p>
+                    <p>Bus 3 (HTL Itzling)</p>
+                    <p>Parking (Techno-Z oder Hofer)</p></font>
+                    </div>          	 	
                 <?php echo $cfs->get("contact_main", 2); ?>            	
                 <?php echo $cfs->get("contact_post", 2); ?>        	
             </div> 			
@@ -974,11 +1007,11 @@ buy now
 						</tr>
 						<tr>
 							<td>
-								<?php echo $cfs->get("imprintleft", 2); ?>
+								<?php echo nl2br(get_option("imprintleft")); ?>
 								
 							</td>
 							<td>
-								<?php echo $cfs->get("imprintright", 2); ?>
+								<?php echo nl2br(get_option("imprintright")); ?>
 
 						</tr>
 			
