@@ -1,6 +1,50 @@
 body {
-	
 	margin:0;
+}
+
+.submenu {
+	display: none;
+	background: black;
+	display: block;
+	position: absolute;
+}
+
+.submenu  {
+	display: none;
+	background-color: black;
+	
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	
+	align-items: flex-start;
+	padding: 10px;
+	margin-left: 540px;
+}
+.mainmenu .submenu {
+	margin-top: -25px;
+}
+
+.submenu li {
+	line-height: 30px;
+	border: 5px solid black;
+}
+
+.submenu li:hover {
+	text-decoration: underline;
+}
+
+.pointer {
+	cursor: pointer;
+
+}
+.mainmenu:hover .submenu {
+	display: flex;
+}
+
+.onlinecheckup {
+    color: white;
+    display: inline;
+    font-size: 12px;
 }
 
 .clearfix:after {
@@ -241,9 +285,6 @@ line-height: 58px;
 
 #getupdatesonfacebook { 
 	display: inline;
-	padding-right: 60px;	
-	
-	
 }
 
 
@@ -277,6 +318,9 @@ line-height: 58px;
 @media all and (max-width: 1400px)  {
 	#getupdatesonfacebook {
 		display:none;		
+	}
+	.submenu {
+		margin-left: 420px;
 	}
 }
 
