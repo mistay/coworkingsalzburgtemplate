@@ -593,7 +593,7 @@ buy now
                 </div>
                 
                 <div id="pricedescr11" style="display:none" class="prices pricedescr pricedescr1">
-                    <?php echo get_option('price_membership_description'); ?>
+                    <?php echo get_option('price_club_description'); ?>
                 </div>                    
                 <div id="pricedescr13" style="display:none" class="prices pricedescr pricedescr2">
                     <?php echo get_option('price_meetingroom_description'); ?>
