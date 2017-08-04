@@ -97,7 +97,7 @@ $cfs =new cfs();
             });
         </script>                  
 -->
-        <script type="text/javascript" src="http://fast.fonts.com/jsapi/3f5ac1f8-244e-44e3-b2de-ce3537e43a2d.js"></script>         
+        <script type="text/javascript" src="https://fast.fonts.com/jsapi/3f5ac1f8-244e-44e3-b2de-ce3537e43a2d.js"></script>         
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/flexslider.css" type="text/css">        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>        
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
@@ -368,8 +368,7 @@ Coworking Book
         <section id="pricing" class="pricing">				
             <div class="centertext white welikeitsimple uppercase eraser">we like it simple and easy
             </div>				
-            <div class="centertext white firstdayonus uppercase eraser">come in for a tour and your first day is on us. Coffee is included.
-            </div>	
+            <div class="centertext white firstdayonus uppercase eraser">come in for a tour and your first day is on us. Coffee is included, VAT is excluded.</div>	
 
 <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin-bottom: 0px; height:0px">
 <input type="hidden" name="cmd" value="_xclick">
@@ -1019,5 +1018,17 @@ buy now
         		</div>
         	</div>
         </section>		 		 		     
+
+<!-- Start of Rocket.Chat Livechat Script -->
+<script type="text/javascript">
+(function(w, d, s, u) {
+	w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
+	var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
+	j.async = true; j.src = 'https://rocket.langhofer.at/packages/rocketchat_livechat/assets/rocketchat-livechat.min.js?_=201702160944';
+	h.parentNode.insertBefore(j, h);
+})(window, document, 'script', 'https://rocket.langhofer.at/livechat');
+</script>
+<!-- End of Rocket.Chat Livechat Script -->
+
     </body>
 </html>
