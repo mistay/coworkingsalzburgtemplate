@@ -332,6 +332,10 @@ line-height: 58px;
 
 
 /* ---------------- flexslider ------------------------------------------------------*/
+#flexslider .slides img{
+	/* override flexslider.css height: auto. w/o this override images are too huge in height */ 
+	height: 300px;
+}
 #flexslider.noborder {
 	border:0px;
 }

@@ -99,10 +99,8 @@ $cfs =new cfs();
 -->
         <script type="text/javascript" src="https://fast.fonts.com/jsapi/3f5ac1f8-244e-44e3-b2de-ce3537e43a2d.js"></script>         
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/flexslider.css" type="text/css">        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>        
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
-
-        <script src="<?php echo get_template_directory_uri(); ?>/jquery.flexslider.js"></script>    
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/jquery.flexslider-min.js"></script>    
 
         <script type="text/javascript">
             function flap(elementname) {
@@ -117,14 +115,13 @@ $cfs =new cfs();
             }
         </script>   
         <script type="text/javascript">
-            $(window).load(function() {
+	    $(function() {
                 $('.flexslider').flexslider({
                     controlNav: false,
                     directionNav: false,
                     touch: true,
-                    mousewheel: false, /* nervt im chrome */
+                    mousewheel: false, // nervt im chrome
                     keyboard: true
-                   
                 });
             });
         </script> 
@@ -338,9 +335,11 @@ Coworking Book
 //                            $img_src = get_custom_field("cws_headerimage:to_image_src");
                             ?>                            
                             <li>                                
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/dummy.png"                                 	 alt=""                                 	 class="flexsliderimage"                                 	 style="background-image: url('<?php echo $img_src; ?>');"                                 	 />                             
+				<!-- bg to achieve cover effect (not possible with img src=..) -->
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/dummy.png" alt="" class="flexsliderimage" style="background-image: url('<?php echo $img_src; ?>');"                                 	 />                        
                             </li>                            
                             <?php
+					//break;
 					}
                         endwhile;
                     endif;
@@ -718,6 +717,7 @@ buy now
 				$doc->loadHTML($html);
 				foreach($imageTags as $tag) {
 					$logo_src = $tag->getAttribute('src');
+					$logo_src = str_replace("http://", "https://", $logo_src); // dirty hack
 					break;
 
 				}
