@@ -249,7 +249,7 @@ src="https://www.facebook.com/tr?id=140363743073498&ev=PageView&noscript=1"
                                 <a href="https://www.facebook.com/CoWorking.Salzburg" target="_blank">
                                 <img class="getupdatesonfacebookimg" alt="getupdatesonfacebook" src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" /></a>
                                 
-                                <div  style="" class="black yellow newsletterheadline"><a target="_blank" href="http://eepurl.com/FCFFj">Newsletter</a></div>
+                                <div  style="" class="black yellow newsletterheadline"><a target="_blank" href="https://eepurl.com/FCFFj">Newsletter</a></div>
                                 
                         </div>
                     </li>							 						
@@ -271,7 +271,7 @@ src="https://www.facebook.com/tr?id=140363743073498&ev=PageView&noscript=1"
                     <li class="yellow pointer mainmenu">
 			<span>Services <div class="onlinecheckup">NEU! Coworking App</div></span>
 			<ul class="submenu">
-                                        <li><a href="http://coworking-camp.com" target="_blank">Coworking Camp</a></li>
+                                        <li><a href="https://coworking-camp.com" target="_blank">Coworking Camp</a></li>
                                         <li><a href="https://www.facebook.com/coworkandbaby/?fref=ts" target = "_blank" >Cowork &amp; Baby</a></li>
 					<li><form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
 <input type="hidden" name="cmd" value="_xclick">
@@ -290,7 +290,7 @@ src="https://www.facebook.com/tr?id=140363743073498&ev=PageView&noscript=1"
 Coworking Book
 </a>
 </form></li>
-                                        <li><a href="http://coworkingsalzburg.com/meet-our-expert/" target="_blank">Meet our Expert</a></li>
+                                        <li><a href="https://coworkingsalzburg.com/meet-our-expert/" target="_blank">Meet our Expert</a></li>
 
                                         <li><a href="https://www.facebook.com/pg/CoWorking.Salzburg/photos/?tab=album&album_id=1303892792982230" target="_blank">Food 4 Feedback</a></li>
                                         <li><a href="https://www.facebook.com/pg/CoWorking.Salzburg/photos/?tab=album&album_id=1216633845041459" target="_blank">Showtime</a></li>
@@ -807,7 +807,7 @@ buy now
                                 </div>									
                                 <div class="blacklink eventdescription bold">	
 
-                                    <a target="_blank" href="http://facebook.com/<?php echo $row["id"]; ?>" class="eventlink">
+                                    <a target="_blank" href="https://facebook.com/<?php echo $row["id"]; ?>" class="eventlink">
                                         <?php 
 					// wenn das 38. zeichen ein umlaut ist, werden komische zeichen angezeigt, todo: loesung finden
                                         if (strlen($row["name"]) > 38) 
@@ -943,7 +943,7 @@ buy now
         <footer class="footer">
             <ul class="socialmedialist">                    
                 <li>
-                    <a href="http://www.facebook.com/CoWorking.Salzburg">
+                    <a href="https://www.facebook.com/CoWorking.Salzburg">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/ico_facebook.png" alt="Coworking Salzburg auf Facebook" /></a>
                 </li>                    
                 <li>
@@ -959,11 +959,11 @@ buy now
                         <img src="<?php echo get_template_directory_uri(); ?>/images/ico_vimeo.png" alt="Coworking Salzburg auf Vimeo"/></a>
                 </li>                    
                 <li>
-                    <a href="http://pinterest.com/coworkingsbg/">
+                    <a href="https://pinterest.com/coworkingsbg/">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/ico_pinterrest.png" alt="Coworking Salzburg auf Pinterest"/></a>
                 </li>                    
                 <li>
-                    <a href="http://at.linkedin.com/pub/romy-sigl/52/27a/828">
+                    <a href="https://at.linkedin.com/pub/romy-sigl/52/27a/828">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/ico_linkedin.png" alt="Coworking Salzburg auf Linkedin"/></a>
                 </li>                    
                 <li>
@@ -974,18 +974,18 @@ buy now
             <div class="yellow footerelement borderright" id="footercoworkingspace">&copy; <?php echo str_replace("##YEAR##", date('Y'), get_option("copyright")); ?>             
             </div>            
             <div class="yellow yellowlink footerelement borderright" id="press">            	
-                <a href="http://firmen.wko.at/Web/DetailsKontakt.aspx?FirmaID=50a6f8f3-1542-4b48-a7f7-a2b765328c97&amp;StandortID=0">Press</a>            
+                <a href="https://firmen.wko.at/Web/DetailsKontakt.aspx?FirmaID=50a6f8f3-1542-4b48-a7f7-a2b765328c97&amp;StandortID=0">Press</a>            
             </div>            
             <div  class="yellow yellowlink footerelement" id="lastfooterelement">            	
                 <div class="btn_imprint">
                 <span id="btn_imprint">Imprint</span>
-                <a target="_blank" href="<?php echo htmlspecialchars('http://validator.w3.org/check?uri=http%3A%2F%2Fcoworkingsalzburg.com%2F'); ?>" >
+                <a target="_blank" href="<?php echo htmlspecialchars('https://validator.w3.org/check?uri=http%3A%2F%2Fcoworkingsalzburg.com%2F'); ?>" >
                 <img class="html5css3" src="<?php echo get_template_directory_uri(); ?>/images/logo_html5.png" alt="html5 valid"/>
                 </a>       
-                <a target="_blank" href="<?php echo htmlspecialchars('http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.coworkingspacesalzburg.at%2Fincludes%2Fcws.css&profile=css3&usermedium=all&warning=1&vextwarning='); ?>" >
+                <a target="_blank" href="<?php echo htmlspecialchars('https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.coworkingspacesalzburg.at%2Fincludes%2Fcws.css&profile=css3&usermedium=all&warning=1&vextwarning='); ?>" >
                 <img class="html5css3" src="<?php echo get_template_directory_uri(); ?>/images/logo_css3.png" alt="css3 valid"/>  
                 </a>
-                <a target="_blank" href="<?php echo htmlspecialchars('http://ipv6.coworkingsalzburg.com/'); ?>" >
+                <a target="_blank" href="<?php echo htmlspecialchars('https://ipv6.coworkingsalzburg.com/'); ?>" >
                 <img class="html5css3" src="<?php echo get_template_directory_uri(); ?>/images/ipv6.png" alt="this site is running on ipv6"/>  
                 </a>    
                 </div>         
