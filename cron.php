@@ -7,6 +7,7 @@
 global $wpdb;
 $fb = file_get_contents("https://graph.facebook.com/Coworking.Salzburg/events?access_token=403765876374173|6_2KB5fPuWk-Zu5SiF7WvRHH74U");
 $decoded_json = json_decode($fb);
+//echo "<pre>";
 //print_r($decoded_json->data);
 
 $count=0;
@@ -30,9 +31,19 @@ foreach ($decoded_json->data as $event) {
     $array_event["location"]=$event->location;
     $array_event["id"]=$event->id;
     
-    //print_r($array_event);
-    
     $insert = $wpdb->insert('fbevents', $array_event);
+    if ($insert === false) {
+	/*
+    	print "<pre>";
+	echo "error inserting record\n";
+	print_r($event);
+	$wpdb->show_errors = true;
+	$wpdb->print_error();
+	echo "tried to insert the following array\n";
+	print_r($array_event);
+	echo "</pre>";
+	*/
+    }
     $count += $insert;
 
     if ($insert == 0) {
