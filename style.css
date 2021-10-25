@@ -1026,6 +1026,11 @@ bottom: 0px;
 
 /* ---------------- events ----------------------------------------------------------*/
 
+/* HIDE EVENTS SECTION */
+
+.seeourevents {
+	 display: none;  
+}
 
 .eventdate {
 	text-align: center;
@@ -1104,8 +1109,6 @@ margin-right: 5px;
     border-bottom: 1px solid #FFEF00;
     
 }
-
-
 
 .events.right {
 display: block;
