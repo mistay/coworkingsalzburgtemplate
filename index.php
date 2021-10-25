@@ -266,9 +266,10 @@ src="https://www.facebook.com/tr?id=140363743073498&ev=PageView&noscript=1"
                         <a class="yellow" href="#where">Where</a>
                     </li>		
                     <li class="yellow pointer mainmenu">
-			<span>Services <div class="onlinecheckup">NEU! Coworking App</div></span>
+			<span>Services <div class="onlinecheckup">zur WOCHENSCHAU</div></span>
 			<ul class="submenu">
-                                        <li><a href="https://coworking-camp.com" target="_blank">Coworking Camp</a></li>
+					<li><a href="https://coworkingsalzburg.com/blog" target="_blank" >Wochenschau</a>
+                                        <li><a href="https://vimeo.com/110133433" target="_blank">Coworking Camp</a></li>
                                         <li><a href="https://www.facebook.com/coworkandbaby/?fref=ts" target = "_blank" >Cowork &amp; Baby</a></li>
 					<li><form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
 <input type="hidden" name="cmd" value="_xclick">
@@ -367,7 +368,7 @@ Coworking Book
         <section id="pricing" class="pricing">				
             <div class="centertext white welikeitsimple uppercase eraser">we like it simple and easy
             </div>				
-            <div class="centertext white firstdayonus uppercase eraser">come in for a tour and your first day is on us. Coffee is included, VAT is excluded.</div>	
+            <div class="centertext white firstdayonus uppercase eraser">come in and tell us what you do. Coffee is included, VAT. excluded.</div>	
 
 <form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="margin-bottom: 0px; height:0px">
 <input type="hidden" name="cmd" value="_xclick">
@@ -600,7 +601,7 @@ buy now
                     <?php echo get_option('price_eventroom_description'); ?>
                 </div>
                                   	                   	
-                <div id="priceheader11" class="eraser prices priceheaders priceheader1">MEMBERSHIP
+                <div id="priceheader11" class="eraser prices priceheaders priceheader1">FLEX TICKET
                 </div>                    
                 <div id="priceheader13" class="eraser prices priceheaders priceheader2">MEETING ROOM 
                 </div>                  	
@@ -627,7 +628,7 @@ buy now
                     <?php echo get_option("price_meetingroom"); ?>.-
                 </div>                    
                 <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk" />                    
-                <div class="white eraser pricelistitem pricedesc">MEMBERSHIP
+                <div class="white eraser pricelistitem pricedesc">FLEX TICKET
                 </div>                    
                 <div class="white eraser pricelistitem pricetotal">
                     <?php echo get_option("price_club", 2); ?>.-
@@ -650,34 +651,26 @@ buy now
         <a id="space"></a>        
         <section id="virtualtour">            
             <div class="virtualtourdiv">			
-                <a href="http://demo.circum.io/cwsbg/#panorama/1" target="_blank">
                     <div class="yellow circle blackbg takeavirtualtourcircle" ><br />
-                        <span class="light">Take a 
+                        <span class="light">Easy
                         </span>
                         <br/>
-                        <span class="bold">VIRTUAL TOUR
+                        <span class="light">Access
+                        </span>
+			<br />
+                        <span class="bold">24/7
                         </span>
                         
-                    </div></a>  		
+                    </div>  		
             </div>        
         </section>        
         <section id="easyaccess" class="blackbg yellow centertext light">                  				
             <div class="divider dark">					
-                <div class="inner-divider">        	Easy Access 
-                    <span class="bold">24/7
-                    </span><span><?php 
-                    
-                    ini_set('default_socket_timeout', 3);    
-                    $json = @file_get_contents("http://vz.langhofer.net/middleware.php/data/380f5160-ea56-11e3-ab13-c56388435cdd.json");
-                    $data = @json_decode($json);
-                    $temp = @$data->data->tuples[$data->data->rows - 2][1];
-                    if($temp > 0) {
-                    	echo " - Temperature: ";
-                		echo "<pan class='bold'>" . str_replace(".",",", round($temp,2)) . "</span>";
-                    	echo "&#176;C";
-                    
-                    }
-                     ?></span>          
+                <div class="inner-divider">        	Call us on
+                    <span class="bold">+43 664 4130361
+                    </span><span>
+
+                     </span>          
                 </div>          
             </div>        
         </section>                 
@@ -720,7 +713,7 @@ buy now
 					$logo_src = str_replace("http://", "https://", $logo_src); // dirty hack
 					break;
 
-				}
+				} 
 			}
 
                         $name = get_the_title();
