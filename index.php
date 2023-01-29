@@ -260,7 +260,7 @@ src="https://www.facebook.com/tr?id=140363743073498&ev=PageView&noscript=1"
                         <a class="yellow" href="#people">People</a>
                     </li>						
                     <li class="">
-                        <a class="yellow" href="#events">Events</a>
+                        <a class="yellow" href="https://www.eventbrite.at/o/coworking-salzburg-gmbh-29253606785">Events</a>
                     </li>						
                     <li class="">
                         <a class="yellow" href="#where">Where</a>
@@ -694,7 +694,7 @@ buy now
                 if ($query->have_posts()) :
                     while ($query->have_posts()) :
                         $query->the_post();
-                        $website = get_post_meta(get_the_ID(), 'cws_coworker_ownwebsite', '')[0]; //get_custom_field("cws_coworker_ownwebsite:to_string");
+                        $website = get_post_meta(get_the_ID(), 'cws_coworker_ownwebsite', '')[0] ?? ""; //get_custom_field("cws_coworker_ownwebsite:to_string");
                         $website = htmlspecialchars($website);
                         $ahrefwebseite = $website == "" ? "" : '<a href="'. $website . '" target="_blank" class="coworker-link">';
                         $ahrefwebseiteclosing = $website == "" ? "" : '</a>';
