@@ -7,23 +7,7 @@ if (has_post_thumbnail($page->ID)) {
 //echo get_the_post_thumbnail($page ->ID, 'medium');
 
 ?>
-<style>
-.coworkandbaby {
-	height: 480px;
-	background: scroll ;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	font-size: 8px;
-	<?php echo $image; ?>
-}
-.coworkandbaby h2 {
-	font-size: 30px;
-}
-
-
-</style>
-<section id="coworkandbaby" class="blackbg yellow coworkandbaby">
+<section id="coworkandbaby" class="blackbg yellow coworkandbaby" lang="de-de">
     <div class="yellowbox">
         <div class="divider light">
             <div class="inner-divider"><h2><?php echo ($page -> post_title); ?></h2></div>

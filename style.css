@@ -2,6 +2,10 @@ body {
 	margin:0;
 }
 
+.coworkingsalzburgaddress {
+	font-size: 16px;
+}
+
 .submenu {
 	display: none;
 	background: black;
@@ -1571,3 +1575,6 @@ margin-top: 0px;
 
 /* END MOBILE SETTINGS */
 /* /werner */
+
+
+

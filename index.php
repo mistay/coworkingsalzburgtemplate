@@ -18,13 +18,12 @@ class cfs {
 $cfs =new cfs();
 ?>
 <!DOCTYPE html>
-<html lang="de-DE">    
+<html lang="en">    
     <head>    	
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>		
-        <meta name="format-detection" content="telephone=yes"/>		
-        <meta name="Description" content="Coworkingspace Salzburg. Entdecke die Welt des Coworkings und nutze den kostenlosen Probetag!"/>        
-        <meta charset="utf-8" />        
-        <title><?php echo get_bloginfo('name');?></title>        
+        <meta name="format-detection" content="telephone=yes">
+        <meta name="Description" content="Coworkingspace Salzburg. Entdecke die Welt des Coworkings und nutze den kostenlosen Probetag!">
+        <meta charset="utf-8" >
+        <title>COWORKINGSALZBURG</title>
         <meta name="description" content="<?php echo get_bloginfo('description');?>">        
         <meta name="author" content="">        
         <!--[if lt IE 9]>
@@ -34,7 +33,7 @@ $cfs =new cfs();
                 <![endif]-->		
 
 
-        <script type="text/javascript">
+        <script>
             function toggle(obj) {
                 var el = document.getElementById(obj);
                 el.style.display = (el.style.display == '' ? 'block' : ''  );
@@ -69,7 +68,7 @@ $cfs =new cfs();
 		}
             }
         </script>        
-        <script type="text/javascript">
+        <script>
             var browser			= navigator.userAgent;
             var browserRegex	= /(Android|BlackBerry|IEMobile|Nokia|iP(ad|hone|od)|Opera M(obi|ini))/;
             var isMobile		= false;
@@ -85,24 +84,47 @@ $cfs =new cfs();
                 <link rel="stylesheet" href="includes/amazium.css">
                 <link rel="stylesheet" href="includes/layout.css">-->                 
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+
+<?php
+$args = array(
+                'sort_order' => 'asc',
+                'sort_column' => 'menu_order',
+                'hierarchical' => 1,
+                'exclude' => '',
+                'include' => '',
+                'meta_key' => '',
+                'meta_value' => '',
+                'authors' => '',
+                'child_of' => 0,
+                'parent' => -1,
+                'exclude_tree' => '',
+                'number' => '',
+                'offset' => 0,
+                'post_type' => 'page',
+                'post_status' => 'publish'
+        );
+        $pages = get_pages($args);
+        foreach ($pages as $page) {
+
+                $filename = get_theme_root() . "/cws/sections/" . $page -> post_name . ".php"; // e.g. /web/vhosts/.../cws/sections/coworkbaby.php
+		if (file_exists($filename)) {
+?>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri() . "/sections/" . $page -> post_name . ".css"; ?>">
+<?php
+                }
+        }
+?>
+
+
         <link rel="shortcut icon" href="/favicon.ico">                 
         <!-- To Top scripts -->         
-        <script src="<?php echo get_template_directory_uri(); ?>/smoothscroll.js" type="text/javascript" ></script>         
-            <!--<script src="http://jqueryjs.googlecode.com/files/jquery-1.3.js" type="text/javascript"></script>-->         
-<!--        <script src="includes/jquery.easing.1.3.js" type="text/javascript"></script>        
-        <script src="includes/jquery.ui.totop.js" type="text/javascript"></script>         
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $().UItoTop({ easingType: 'easeOutQuart' });
-            });
-        </script>                  
--->
-        <script type="text/javascript" src="https://fast.fonts.com/jsapi/3f5ac1f8-244e-44e3-b2de-ce3537e43a2d.js"></script>         
+        <script src="<?php echo get_template_directory_uri(); ?>/smoothscroll.js"></script>         
+        <script src="https://fast.fonts.com/jsapi/3f5ac1f8-244e-44e3-b2de-ce3537e43a2d.js"></script>         
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/flexslider.css" type="text/css">        
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="<?php echo get_template_directory_uri(); ?>/jquery.flexslider-min.js"></script>    
 
-        <script type="text/javascript">
+        <script>
             function flap(elementname) {
                 var ele = document.getElementById(elementname);
                 if (ele.style.display == "none")
@@ -114,7 +136,7 @@ $cfs =new cfs();
 		
             }
         </script>   
-        <script type="text/javascript">
+        <script>
 	    $(function() {
                 $('.flexslider').flexslider({
                     controlNav: false,
@@ -163,8 +185,8 @@ $cfs =new cfs();
             });
         </script>       
 
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeSLHN6pbrZScchh_oSnZILL9B9vmXPAo"></script>        
-        <script type="text/javascript">
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeSLHN6pbrZScchh_oSnZILL9B9vmXPAo"></script>        
+        <script>
 	    $(function() {
                 var myLatlng = new google.maps.LatLng(47.82290839006712,13.040488511323929);
                 var mapOptions = {
@@ -184,7 +206,7 @@ $cfs =new cfs();
         </script>    
 
 
-<script type="text/javascript">
+<script> 
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-43590908-1']);
@@ -198,6 +220,7 @@ $cfs =new cfs();
 
 </script>
 <!-- Facebook Pixel Code -->
+<!--
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
@@ -207,9 +230,10 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '140363743073498');
 fbq('track', "PageView");</script>
-<noscript><img height="1" width="1" style="display:none"
+<noscript><img alt="" height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=140363743073498&ev=PageView&noscript=1"
 /></noscript>
+-->
 <!-- End Facebook Pixel Code -->
 
 
@@ -224,7 +248,7 @@ src="https://www.facebook.com/tr?id=140363743073498&ev=PageView&noscript=1"
                     <li class=""><a class="yellow" href="#pricing">Pricing</a></li>						
                     <li class=""><a class="yellow" href="#space">Space</a></li>						
                     <!--<li class=""><a class="yellow" href="#people">People</a></li>-->						
-                    <!--<li class=""><a class="yellow" href="#events">Events</a></li>-->					
+                    <li class=""><a class="yellow" href="https://www.eventbrite.at/o/coworking-salzburg-gmbh-29253606785" target="_blank">Events</a></li>
                     <!--<li class=""><a class="yellow" href="#about">About</a></li>	-->						
                     <li class=""><a class="yellow" href="#where">Where</a></li>					
                 </ul>
@@ -244,7 +268,7 @@ src="https://www.facebook.com/tr?id=140363743073498&ev=PageView&noscript=1"
                             
                                 <span class="opacity60 yellow">Get <b>UPDATES</b> on</span>
                                 <a href="https://www.facebook.com/CoWorking.Salzburg" target="_blank">
-                                <img class="getupdatesonfacebookimg" alt="getupdatesonfacebook" src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" /></a>
+                                <img class="getupdatesonfacebookimg" alt="getupdatesonfacebook" src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" ></a>
                                 
                                 <div  style="" class="black yellow newsletterheadline"><a target="_blank" href="https://eepurl.com/FCFFj">Newsletter</a></div>
                                 
@@ -260,14 +284,15 @@ src="https://www.facebook.com/tr?id=140363743073498&ev=PageView&noscript=1"
                         <a class="yellow" href="#people">People</a>
                     </li>						
                     <li class="">
-                        <a class="yellow" href="https://www.eventbrite.at/o/coworking-salzburg-gmbh-29253606785">Events</a>
+                        <a class="yellow" href="https://www.eventbrite.at/o/coworking-salzburg-gmbh-29253606785" target="_blank">Events</a>
                     </li>						
                     <li class="">
                         <a class="yellow" href="#where">Where</a>
                     </li>		
                     <li class="yellow pointer mainmenu">
-			<span>Services <div class="onlinecheckup">zur WOCHENSCHAU</div></span>
+			<span>Services</span> <div class="onlinecheckup">zum DWYL Programm</div>
 			<ul class="submenu">
+					<li><a href="#coworkandbaby">DWYL Programm</a>
 					<li><a href="https://coworkingsalzburg.com/blog" target="_blank" >Wochenschau</a>
                                         <li><a href="https://vimeo.com/110133433" target="_blank">Coworking Camp</a></li>
                                         <li><a href="https://www.facebook.com/coworkandbaby/?fref=ts" target = "_blank" >Cowork &amp; Baby</a></li>
@@ -315,7 +340,7 @@ Coworking Book
         </div>
 
 
-        <section id="slider">			
+        <div id="slider">			
             <div id="flexslider" class="nomargin noborder flexslider carousel " >                
                 <ul class="slides" >                    
                     <?php
@@ -337,7 +362,7 @@ Coworking Book
                             ?>                            
                             <li>                                
 				<!-- bg to achieve cover effect (not possible with img src=..) -->
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/dummy.png" alt="" class="flexsliderimage" style="background-image: url('<?php echo $img_src; ?>');"                                 	 />                        
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/dummy.png" alt="" class="flexsliderimage" style="background-image: url('<?php echo $img_src; ?>');">
                             </li>                            
                             <?php
 					//break;
@@ -347,16 +372,16 @@ Coworking Book
                     ?>                
                 </ul>            
             </div>        
-        </section>		
+        </div>		
         
         
         
-        <section id="coworkingspaceoffers" class="yellowbg">				
+        <div id="coworkingspaceoffers" class="yellowbg">				
             <div class="divider light">					
                 <div class="inner-divider">          
                     <a class="wait-link" href="https://vimeo.com/62550490">            
-                        <div class="yellow circle blackbg waitwhat yellowlink"><br />Wait!
-                            <br/>                
+                        <div class="yellow circle blackbg waitwhat yellowlink"><br>Wait!
+                            <br>                
                             <span class="light">WHAT?
                             </span>
                         </div></a><span class="bold">COWORKING</span>SALZBURG offers 
@@ -364,8 +389,8 @@ Coworking Book
                     </span>					                      
                 </div>             				 				
             </div>                                   		
-        </section>  		
-        <section id="pricing" class="pricing">				
+        </div>  		
+        <div id="pricing" class="pricing">				
             <div class="centertext white welikeitsimple uppercase eraser">we like it simple and easy
             </div>				
             <div class="centertext white firstdayonus uppercase eraser">come in and tell us what you do. Coffee is included, VAT. excluded.</div>	
@@ -387,7 +412,7 @@ Coworking Book
 <a class="buynow" id="buynow1" onclick="this.parentElement.submit()">
 buy now 
 </a>
-<img alt="" border="0" src="https://www.paypal.com/de_DE/i/scr/pixel.gif" width="1" height="1">
+<img alt="" src="https://www.paypal.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 </form>
 
 
@@ -466,41 +491,41 @@ buy now
                 </div>                  	
                 <div id="priceheader2" class="eraser prices priceheaders priceheader3">MONTHLY TICKET
                 </div>                  	                   	          			
-                <img id="boxes_chalk" src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk.png" alt="boxes chalk" />
-                <img class="boxes_chalk_line" id="boxes_chalk_line1" src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk_line1.png" alt="boxes chalk lines" />
-                <img class="boxes_chalk_line" id="boxes_chalk_line2" src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk_line2.png" alt="boxes chalk lines" />
-                <img class="boxes_chalk_line" id="boxes_chalk_line3" src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk_line3.png" alt="boxes chalk lines" />
+                <img src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk.png" alt="boxes chalk">
+                <img class="boxes_chalk_line" id="boxes_chalk_line1" src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk_line1.png" alt="boxes chalk lines">
+                <img class="boxes_chalk_line" id="boxes_chalk_line2" src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk_line2.png" alt="boxes chalk lines">
+                <img class="boxes_chalk_line" id="boxes_chalk_line3" src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk_line3.png" alt="boxes chalk lines">
                            
             </div>                                 
             <!-- mobile -->                 
             <div class="pricing-mobile">					
-                <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk" />                	
+                <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk">
                 <div class="white eraser pricelistitem pricedesc">MONTHLY TICKET
                 </div>                    
                 <div class="white eraser pricelistitem pricetotal">
                     <?php echo get_option("price_ticket_month"); ?>.-
                 </div>                    
-                <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk" />                    
+                <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk"> 
                 <div class="white eraser pricelistitem pricedesc">10 TICKETS
                 </div>                    
                 <div class="white eraser pricelistitem pricetotal">
                     <?php echo get_option("price_ticket_10"); ?>.-
                 </div>                    
-                <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk" />                    
+                <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk">
                 <div class="white eraser pricelistitem pricedesc">1 TICKET
                 </div>                    
                 <div class="white eraser pricelistitem pricetotal">
                     <?php echo get_option("price_ticket_day"); ?>.-
                 </div>                    
-                <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk" /> 
+                <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk">
             </div>  
             
 
 
 
-<br />
-<br />
-<br />
+<br>
+<br>
+<br>
 
 
 
@@ -607,64 +632,64 @@ buy now
                 </div>                  	
                 <div id="priceheader12" class="eraser prices priceheaders priceheader3">COWORKING BOOK 
                 </div>                  	                   	          			
-                <img id="boxes_chalk" src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk.png" alt="boxes chalk" />
-                <img class="boxes_chalk_line" id="boxes_chalk_line11" src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk_line1.png" alt="boxes chalk lines" />
-                <img class="boxes_chalk_line" id="boxes_chalk_line12" src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk_line2.png" alt="boxes chalk lines" />
-                <img class="boxes_chalk_line" id="boxes_chalk_line13" src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk_line3.png" alt="boxes chalk lines" />
+                <img src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk.png" alt="boxes chalk">
+                <img class="boxes_chalk_line" id="boxes_chalk_line11" src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk_line1.png" alt="boxes chalk lines">
+                <img class="boxes_chalk_line" id="boxes_chalk_line12" src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk_line2.png" alt="boxes chalk lines">
+                <img class="boxes_chalk_line" id="boxes_chalk_line13" src="<?php echo get_template_directory_uri(); ?>/images/boxes_chalk_line3.png" alt="boxes chalk lines">
                            
             </div>                                 
             <!-- mobile -->                 
             <div class="pricing-mobile">					
-                <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk" />                	
+                <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk">
                 <div class="white eraser pricelistitem pricedesc">COWORKING BOOK
                 </div>                    
                 <div class="white eraser pricelistitem pricetotal">
                     <?php echo get_option("price_eventroom"); ?>.-
                 </div>                    
-                <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk" /> 
+                <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk">
                 <div class="white eraser pricelistitem pricedesc">MEETING ROOM
                 </div>                    
                 <div class="white eraser pricelistitem pricetotal">
                     <?php echo get_option("price_meetingroom"); ?>.-
                 </div>                    
-                <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk" />                    
+                <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk">
                 <div class="white eraser pricelistitem pricedesc">FLEX TICKET
                 </div>                    
                 <div class="white eraser pricelistitem pricetotal">
                     <?php echo get_option("price_club", 2); ?>.-
                 </div>                    
-                <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk" />                    
+                <img class="chalkline" src="<?php echo get_template_directory_uri(); ?>/images/lines_chalk.png" alt="lines chalk">
             </div>  
            
 
 
 
-        </section>        
-        <section id="thedowhatyouwantrevolution2" class="blackbg yellow centertext light thedowhatyouwantrevolution">          				
+        </div>        
+        <div id="thedowhatyouwantrevolution2" class="blackbg yellow centertext light thedowhatyouwantrevolution">          				
             <div class="divider dark">					
                 <div class="inner-divider">        	"The 
                     <span class="bold">DO WHAT YOU LOVE REVOLUTION
                     </span> started here" 
                 </div>
             </div>        
-        </section>                  
+        </div>                  
         <a id="space"></a>        
-        <section id="virtualtour">            
+        <div id="virtualtour">            
             <div class="virtualtourdiv">			
-                    <div class="yellow circle blackbg takeavirtualtourcircle" ><br />
+                    <div class="yellow circle blackbg takeavirtualtourcircle" ><br>
                         <span class="light">Easy
                         </span>
-                        <br/>
+                        <br>
                         <span class="light">Access
                         </span>
-			<br />
+			<br>
                         <span class="bold">24/7
                         </span>
                         
                     </div>  		
             </div>        
-        </section>        
-        <section id="easyaccess" class="blackbg yellow centertext light">                  				
+        </div>        
+        <div id="easyaccess" class="blackbg yellow centertext light">                  				
             <div class="divider dark">					
                 <div class="inner-divider">        	Call us on
                     <span class="bold">+43 664 4130361
@@ -673,9 +698,9 @@ buy now
                      </span>          
                 </div>          
             </div>        
-        </section>                 
+        </div>                 
         <a id="people"></a>                     
-        <section id="coworkers" class="coworkers centertext">                     
+        <div id="coworkers" class="coworkers centertext">                     
             <div  class="light white meetourcoworkers" >Meet our 
                 <span class="bold">COWORKERS
                 </span>
@@ -722,7 +747,7 @@ buy now
                             <div class="coworkeritem">                                                             	
                                 <?php if ($img_src != "") { ?>
                                     <?php echo $ahrefwebseite; ?>                                   	
-                                        <img class="coworkerimg" src="<?php echo $img_src ?>" alt="<?php echo $name; ?>" />
+                                        <img class="coworkerimg" src="<?php echo $img_src ?>" alt="<?php echo $name; ?>">
                                     <?php echo $ahrefwebseiteclosing; ?>                                	
                                 <?php } ?> 
                                 
@@ -739,10 +764,10 @@ buy now
                                 <?php echo $ahrefwebseite; ?>                                
                                     <span class="coworkerlogo" >                                  	
                                         <?php if ($logo_src == "") { ?>                                   		
-                                            <img src="/wp-content/uploads/blanklogo.jpg" alt="Noch kein Logo" />                                  	
+                                            <img src="/wp-content/uploads/blanklogo.jpg" alt="Noch kein Logo">                                  	
                                         <?php } ?> 	                                                                  	
                                         <?php if ($logo_src != "") { ?>                                     	
-                                            <img src="<?php echo $logo_src ?>" alt="Logo von <?php echo $name; ?>" />                                  	
+                                            <img src="<?php echo $logo_src ?>" alt="Logo von <?php echo $name; ?>">
                                         <?php } ?> 	                                 
                                     </span>
                                 <?php echo $ahrefwebseiteclosing; ?>                                                            
@@ -755,8 +780,8 @@ buy now
                 <div style="clear:both; padding-bottom: 38px;">                
                 </div>                
             </div>        
-        </section>                          
-        <section id="events" class="white centertext light">		
+        </div>                          
+        <div id="events" class="white centertext light">		
             <div class="seeourevents">
                 <div class="inner-divider">			
                     <div class="seeourevents-head">See our <span class="bold">EVENTS</span>. You're invited! 			
@@ -829,10 +854,10 @@ buy now
             </div>
 
 
-        </section>  
+        </div>  
         
         <a id="about"></a> 
-        <section id="aboutus" class="blackbg white centertext light">
+        <div id="aboutus" class="blackbg white centertext light" lang="de-de">
 			
 				<div class="aboutus">
 					
@@ -851,7 +876,7 @@ buy now
 ">
 
 					<span style="font-size: 40px">ABOUT <span class="bold">US</span></span>
-					<br />
+					<br>
 					<?php echo get_option("aboutus1"); ?>
 						</div>
 						
@@ -873,35 +898,37 @@ buy now
 					</div>
 				</div>
 				
-        </section>
-        <section id="thedowhatyouwantrevolution1" class="blackbg yellow centertext thedowhatyouwantrevolution">                  				
+        </div>
+        <div id="thedowhatyouwantrevolution1" class="blackbg yellow centertext thedowhatyouwantrevolution">                  				
             <div class="divider dark">					
                 <div class="inner-divider">        	"The 
                     <span class="bold">DO WHAT YOU WANT REVOLUTION
                     </span> started here"           
                 </div>          
             </div>        
-        </section>                          
+        </div>                          
         <a id="where"></a>        
-        <section id="googlemapssayhello">        	
+        <div id="googlemapssayhello">        	
             <div class="yellowbox">           	 	
                 <div class="divider light">					
                     <div class="inner-divider"><?php //  echo $cfs->get("contact_header", 2);             ?>
                         Stop by, say <strong>Hello</strong></div>
-                    <font size="3"><p>COWORKING SALZBURG</p>
-                    <p>Techno-Z (Techno 2)</p>
-                    <p>Jakob-Haringer-Straße, 3</p>
-                    <p>5020, Salzburg</p>
-                    <p>Bus 6 (Jakob-Haringer)</p>
-                    <p>Bus 3 (HTL Itzling)</p>
-                    <p>Parking (Techno-Z oder Hofer)</p></font>
+			<div class="coworkingsalzburgaddress">
+	                    <p>COWORKING SALZBURG</p>
+        	            <p>Techno-Z (Techno 2)</p>
+                	    <p>Jakob-Haringer-Straße, 3</p>
+	                    <p>5020, Salzburg</p>
+        	            <p>Bus 6 (Jakob-Haringer)</p>
+                	    <p>Bus 3 (HTL Itzling)</p>
+			    <p>Parking (Techno-Z oder Hofer)</p>
+			</div>
                     </div>          	 	
                 <?php echo $cfs->get("contact_main", 2); ?>            	
                 <?php echo $cfs->get("contact_post", 2); ?>        	
             </div> 			
             <div id="map_canvas" class="googlemaps">			         	
             </div>        
-        </section>		
+        </div>		
 
 
 <?php
@@ -937,31 +964,31 @@ buy now
             <ul class="socialmedialist">                    
                 <li>
                     <a href="https://www.facebook.com/CoWorking.Salzburg">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ico_facebook.png" alt="Coworking Salzburg auf Facebook" /></a>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/ico_facebook.png" alt="Coworking Salzburg auf Facebook"></a>
                 </li>                    
                 <li>
                     <a href="https://twitter.com/CoworkingSBG">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ico_twitter.png" alt="Coworking Salzburg auf Twitter"/></a>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/ico_twitter.png" alt="Coworking Salzburg auf Twitter"></a>
                 </li>                    
                 <li>
                     <a href="https://plus.google.com/114448710587785813186/about">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ico_googleplus.png" alt="Coworking Salzburg auf Google Plus"/></a>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/ico_googleplus.png" alt="Coworking Salzburg auf Google Plus"></a>
                 </li>                    
                 <li>
                     <a href="https://vimeo.com/coworkingsalzburg">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ico_vimeo.png" alt="Coworking Salzburg auf Vimeo"/></a>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/ico_vimeo.png" alt="Coworking Salzburg auf Vimeo"></a>
                 </li>                    
                 <li>
                     <a href="https://pinterest.com/coworkingsbg/">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ico_pinterrest.png" alt="Coworking Salzburg auf Pinterest"/></a>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/ico_pinterrest.png" alt="Coworking Salzburg auf Pinterest"></a>
                 </li>                    
                 <li>
                     <a href="https://at.linkedin.com/pub/romy-sigl/52/27a/828">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ico_linkedin.png" alt="Coworking Salzburg auf Linkedin"/></a>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/ico_linkedin.png" alt="Coworking Salzburg auf Linkedin"></a>
                 </li>                    
                 <li>
                     <a href="https://www.xing.com/companies/coworkingsalzburg">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ico_xing.png" alt="Coworking Salzburg auf Xing"/></a>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/ico_xing.png" alt="Coworking Salzburg auf Xing"></a>
                 </li>                
             </ul>                                 
             <div class="yellow footerelement borderright" id="footercoworkingspace">&copy; <?php echo str_replace("##YEAR##", date('Y'), get_option("copyright")); ?>             
@@ -973,26 +1000,26 @@ buy now
                 <div class="btn_imprint">
                 <span id="btn_imprint">Imprint</span>
                 <a target="_blank" href="<?php echo htmlspecialchars('https://validator.w3.org/check?uri=http%3A%2F%2Fcoworkingsalzburg.com%2F'); ?>" >
-                <img class="html5css3" src="<?php echo get_template_directory_uri(); ?>/images/logo_html5.png" alt="html5 valid"/>
+                <img class="html5css3" src="<?php echo get_template_directory_uri(); ?>/images/logo_html5.png" alt="html5 valid">
                 </a>       
                 <a target="_blank" href="<?php echo htmlspecialchars('https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.coworkingspacesalzburg.at%2Fincludes%2Fcws.css&profile=css3&usermedium=all&warning=1&vextwarning='); ?>" >
-                <img class="html5css3" src="<?php echo get_template_directory_uri(); ?>/images/logo_css3.png" alt="css3 valid"/>  
+                <img class="html5css3" src="<?php echo get_template_directory_uri(); ?>/images/logo_css3.png" alt="css3 valid">  
                 </a>
                 <a target="_blank" href="<?php echo htmlspecialchars('https://ipv6.coworkingsalzburg.com/'); ?>" >
-                <img class="html5css3" src="<?php echo get_template_directory_uri(); ?>/images/ipv6.png" alt="this site is running on ipv6"/>  
+                <img class="html5css3" src="<?php echo get_template_directory_uri(); ?>/images/ipv6.png" alt="this site is running on ipv6">  
                 </a>    
                 </div>         
             </div>
                       		
         </footer>
-        <section id="imprint" class="yellowbg" style="display:none">
+        <div id="imprint" class="yellowbg" style="display:none">
 			 <div class="divider light">					
                 <div class="inner-divider">
 					<table class="imprint">
 						<tr>
 							<td>
-								<span class="bold">Imprint</span><br/>
-									<br/>
+								<span class="bold">Imprint</span><br>
+									<br>
 							</td>
 							<td>
 							</td>
@@ -1010,18 +1037,6 @@ buy now
 					</table>
         		</div>
         	</div>
-        </section>		 		 		     
-
-<!-- Start of Rocket.Chat Livechat Script -->
-<script type="text/javascript">
-(function(w, d, s, u) {
-	w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
-	var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
-	j.async = true; j.src = 'https://rocket.langhofer.at/packages/rocketchat_livechat/assets/rocketchat-livechat.min.js?_=201702160944';
-	h.parentNode.insertBefore(j, h);
-})(window, document, 'script', 'https://rocket.langhofer.at/livechat');
-</script>
-<!-- End of Rocket.Chat Livechat Script -->
-
+        </div>		 		 		     
     </body>
 </html>
