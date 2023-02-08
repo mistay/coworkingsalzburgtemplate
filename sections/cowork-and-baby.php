@@ -7,7 +7,7 @@ if (has_post_thumbnail($page->ID)) {
 //echo get_the_post_thumbnail($page ->ID, 'medium');
 
 ?>
-<section id="coworkandbaby" class="blackbg yellow coworkandbaby" lang="de-de">
+<section id="dwyl" class="blackbg yellow coworkandbaby" lang="de-de">
     <div class="yellowbox">
         <div class="divider light">
             <div class="inner-divider"><h2><?php echo ($page -> post_title); ?></h2></div>
