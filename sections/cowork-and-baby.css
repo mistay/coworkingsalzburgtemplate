@@ -1,11 +1,11 @@
 .coworkandbaby {
-        height: 480px;
+        min-height: 660px;
         background: scroll ;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         font-size: 8px;
-	background-image: url("https://coworkingsalzburg.com/wp-content/uploads/cowork_and_baby_brainstorming-1.jpg");
+	background-image: url("https://coworkingsalzburg.com/wp-content/uploads/Sophia-DWYL.jpg");
 }
 .coworkandbaby h2 {
         font-size: 30px;
