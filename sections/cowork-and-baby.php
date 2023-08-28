@@ -8,7 +8,7 @@ if (has_post_thumbnail($page->ID)) {
 
 ?>
 <section id="dwyl" class="blackbg yellow coworkandbaby" lang="de-de">
-    <div class="yellowbox">
+    <div class="yellowbox-2">
         <div class="divider light">
             <div class="inner-divider"><h2><?php echo ($page -> post_title); ?></h2></div>
             <?php echo nl2br($page -> post_content); ?>
