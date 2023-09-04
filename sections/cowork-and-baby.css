@@ -1,13 +1,24 @@
 .coworkandbaby {
-        height: 680px;
+        height: 920px;
         background: scroll ;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         font-size: 8px;
-	background-image: url("https://coworkingsalzburg.com/wp-content/uploads/Sophia-DWYL.jpg");
+	background-image: url("https://coworkingsalzburg.com/wp-content/uploads/Sophia-1.jpg");
 }
 .coworkandbaby h2 {
         font-size: 30px;
 }
 
+.sponsorbox {
+	top: 5%;
+	position: relative;
+	width: 40%;
+	left: 1%;
+	height: 100px;
+	font-size: 100;
+	background-image: url("https://coworkingsalzburg.com/wp-content/uploads/Euregio-Interreg-Logo.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
